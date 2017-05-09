@@ -156,7 +156,8 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public', express.static(__dirname + '/public'));
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '/public/index.html'));
+    // res.sendFile(path.join(__dirname, '/public/index.html'));
+    res.send('hello world111')
 });
 if (config.env === 'dev') {
     app.use(errorHandler());
